@@ -6,7 +6,7 @@
   <nav id="sidebar">
     <ul id="categories">
       <% Category.all.each do |category|%>
-        <li class="category"><%= link_to category.name, "#wheredoIgo???" %></li>
+        <li class="category"><%= link_to category.name, category_path(category) %></li>
       <% end %>
     </ul>
   </nav>

@@ -13,6 +13,16 @@
   </nav>
   <main>
     <h1>My Amazing Category <%= @category.name %></h1>
+
+    <h3>Recipes</h3>
+
+    <ul>
+      <%= @category.recipes.each do |recipe| %>
+        <li class="recipe">
+          <h4><%= recipe.title %></h4>
+        </li>
+      <% end %>
+    </ul>
   </main>
 </body>
 </html>
