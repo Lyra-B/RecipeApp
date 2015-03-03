@@ -1,0 +1,17 @@
+<html>
+<head>
+  <title>My Amazing Recipe App</title>
+</head>
+<body>
+  <nav id="sidebar">
+    <ul id="categories">
+      <% Category.all.each do |category|%>
+        <li class="category"><%= link_to category.name, "#wheredoIgo???" %></li>
+      <% end %>
+    </ul>
+  </nav>
+  <main>
+    <h1>My Amazing Recipe App</h1>
+  </main>
+</body>
+</html>
