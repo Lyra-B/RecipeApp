@@ -1,28 +1,11 @@
-<html>
-<head>
-  <title>My Amazing Category App</title>
-</head>
-<body>
-  <nav id="sidebar">
-    <h3>Categories</h3>
-    <ul id="categories">
-      <% @categories.each do |category|%>
-        <li class="category"><%= link_to category.name, category_path(category) %></li>
-      <% end %>
-    </ul>
-  </nav>
-  <main>
-    <h1>My Amazing Category <%= @category.name %></h1>
+<h1>My Amazing Category <%= @category.name %></h1>
 
-    <h3>Recipes</h3>
+<h3>Recipes</h3>
 
-    <ul>
-      <%= @category.recipes.each do |recipe| %>
-        <li class="recipe">
-          <h4><%= recipe.title %></h4>
-        </li>
-      <% end %>
-    </ul>
-  </main>
-</body>
-</html>
+<ul>
+  <%= @category.recipes.each do |recipe| %>
+    <li class="recipe">
+      <h4><%= recipe.title %></h4>
+    </li>
+  <% end %>
+</ul>
