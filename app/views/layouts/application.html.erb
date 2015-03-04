@@ -10,9 +10,10 @@
 <nav id="sidebar">
     <h3>Categories</h3>
     <ul id="categories">
-      <% @categories.each do |category|%>
-        <li class="category"><%= link_to category.name, category_path(category) %></li>
-      <% end %>
+<!--       <% @categories.each do |category|%>
+        <%= render category%>
+      <% end %> -->
+      <%= render @categories%>
     </ul>
   </nav>
   <main>
