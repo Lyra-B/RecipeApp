@@ -1,4 +1,5 @@
 Feature: Mailing List
+  @wip
   Scenario: A visitor joins the mailing list
     Given I am on the homepage
     When I enter my name and email address
