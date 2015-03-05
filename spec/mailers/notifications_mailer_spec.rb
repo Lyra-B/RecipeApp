@@ -17,7 +17,6 @@ RSpec.describe NotificationsMailer, type: :mailer do
       expect(@email.from).to eq(['admin@wegotcoders.com'])
       expect(@email.cc).to eq(['audit@wegotcoders.com'])
       @email.subject.should eq('Welcome to the Recipe App')
-
       expect(@email.body.to_s).to match(/Welcome/)
     end
   end
