@@ -1,5 +1,4 @@
-%fieldset
-  =label :email
-  =text_field :email
-%fieldset
-  =submit "Send to a friend"
+= form_tag(recommend_recipe_path, :method => "post") do
+  = label_tag(:email)
+  = text_field_tag(:email)
+  = submit_tag("Recommend to a friend")

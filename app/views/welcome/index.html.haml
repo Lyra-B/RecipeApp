@@ -1,20 +1,13 @@
-!!!5
-%html
-  %head
-    %title My Amazing Recipe App
-  %body
-    %main
-      / = if flash[:notice]
-      /   %h3
-      = flash[:notice]
-      %h1 My Amazing Recipe App
-      / = form_for(:user, url: user_index_path, method: :post) do |f|
-      = form_for @user do |f|
-        %fieldset
-          =f.label :name
-          =f.text_field :name
-        %fieldset
-          =f.label :email
-          =f.text_field :email
-        %fieldset
-          =f.submit "Join the mailing list!"
+= if flash[:notice]
+  %h3
+    = flash[:notice]
+%h1 My Amazing Recipe App
+= form_for @user do |f|
+  %fieldset
+    =f.label :name
+    =f.text_field :name
+  %fieldset
+    =f.label :email
+    =f.text_field :email
+  %fieldset
+    =f.submit "Join the mailing list!"
