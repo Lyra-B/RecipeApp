@@ -20,4 +20,17 @@ RSpec.describe NotificationsMailer, type: :mailer do
       expect(@email.body.to_s).to match(/Welcome/)
     end
   end
+
+  describe "Recommendation Email"
+    before do
+      person = Struct.new("Person", :email).new
+      person.email = "glykeriapeppa@gmail.com"
+      recipe = Recipe.create!(:title => "Lasagna")
+      @email =
+        NotificationsMailer.recommend(person, recipe).deliver_now
+    end
+
+    it "should send a recommendation email" do
+      expect(@email.body.to_s).to match(/http:\/\/example.com\/recipes\/1/)
+    end
 end
