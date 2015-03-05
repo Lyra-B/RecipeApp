@@ -4,7 +4,7 @@ When(/^I enter my name and email address$/) do
 end
 
 When(/^I join the mailing list$/) do
-  click_button "Join the mailing list"
+  click_button "Join the mailing list!"
 end
 
 Then(/^I should be signed\-up to the mailing list$/) do
