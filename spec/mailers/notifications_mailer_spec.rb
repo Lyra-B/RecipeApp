@@ -21,7 +21,7 @@ RSpec.describe NotificationsMailer, type: :mailer do
     end
   end
 
-  describe "Recommendation Email"
+  describe "Recommendation Email" do
     before do
       person = Struct.new("Person", :email).new
       person.email = "glykeriapeppa@gmail.com"
@@ -33,4 +33,5 @@ RSpec.describe NotificationsMailer, type: :mailer do
     it "should send a recommendation email" do
       expect(@email.body.to_s).to match(/http:\/\/example.com\/recipes\/1/)
     end
+  end
 end

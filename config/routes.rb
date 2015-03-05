@@ -7,8 +7,12 @@ Rails.application.routes.draw do
 
   resources :categories, :only => [:show]
   resources :welcome, :only => [:index]
-  resources :user, :only => [:create]
-  resources :recipes, :only => [:show]
+  resources :users, :only => [:create]
+  resources :recipes, :only => [:show] do
+    member do
+      post :recommend
+    end
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
