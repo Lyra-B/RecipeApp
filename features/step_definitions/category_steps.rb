@@ -14,5 +14,5 @@ When(/^I select a category$/) do
 end
 
 Then(/^I should see all the recipes in that category$/) do
-  assert page.has_content?("Baked Beans"), "Couldn't find baked beans!"
+  expect(page.has_content?("Baked Beans")).to eq(true)
 end
