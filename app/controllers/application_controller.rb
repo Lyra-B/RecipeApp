@@ -5,5 +5,6 @@ class ApplicationController < ActionController::Base
 
   before_filter do
     @categories = Category.all
+    # @user = User.new
   end
 end

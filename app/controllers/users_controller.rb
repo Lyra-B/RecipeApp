@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   def create
     # binding.pry
     @user = User.create!(allowed_params)
+    # binding.pry
     flash[:notice] = "Added to Mailing List"
     redirect_to welcome_index_path
   end
