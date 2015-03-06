@@ -4,8 +4,9 @@ class NotificationsMailer < ApplicationMailer
     mail :to => user.email, :subject => "Welcome to the Recipe App"
   end
 
-  def recommend(email,url)
-    @url = url
-    mail :to => email, :subject => "Check this recipe!"
+  def recommend(email,obj)
+    @obj = obj
+    @email = email
+    mail :to => @email, :subject => "Check this recipe!"
   end
 end

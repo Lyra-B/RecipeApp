@@ -26,6 +26,7 @@ RSpec.describe NotificationsMailer, type: :mailer do
       person = Struct.new("Person", :email).new
       person.email = "glykeriapeppa@gmail.com"
       recipe = Recipe.create!(:title => "Lasagna")
+      # binding.pry
       @email =
         NotificationsMailer.recommend(person, recipe).deliver_now
     end
