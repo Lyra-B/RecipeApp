@@ -5,7 +5,8 @@ class RecipesController < ApplicationController
 
   def recommend
     @email = params[:email]
-    NotificationsMailer.recommend(@email,recipe_path).deliver_now
+    # @url = recipe_url{:id => params[:id]}
+    NotificationsMailer.recommend(@email,@url).deliver_now
     redirect_to recipe_path
   end
 end
