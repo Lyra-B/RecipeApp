@@ -1,4 +1,4 @@
 class Category < ActiveRecord::Base
-  has_many :categorisations
-  has_many :recipes, :through => :categorisations, :source => :taxon
+  has_many :recipes, :through => :categorisations
+  has_many :categorisations, :as => :taxon
 end

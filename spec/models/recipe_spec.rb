@@ -7,6 +7,7 @@ RSpec.describe Recipe, type: :model do
       @recipe.categorisations.build(:taxon => Category.create(:name=> "Vegeterian"))
       @recipe.categorisations.build(:taxon => Cuisine.create(:name => "Italian"))
       @recipe.save
+      binding.pry
       @recipe.reload
     end
 
@@ -23,7 +24,7 @@ RSpec.describe Recipe, type: :model do
     end
 
     it "should give me all taxons" do
-      expect(@recipe.categorisations.taxons.length).to eq(12)
+      expect(@recipe.categorisations.taxons.length).to eq(2)
       expect(@recipe.categorisations.taxons.first.name).to eq("Vegetarian")
       expect(@recipe.categorisations.taxons.second.name).to eq("Italian")
     end
