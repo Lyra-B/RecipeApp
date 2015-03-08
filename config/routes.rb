@@ -13,7 +13,9 @@ Rails.application.routes.draw do
       post :recommend
     end
   end
-  resources :chefs, :only => [:new, :create, :show]
+  resources :chefs, :only => [:new, :create, :show] do
+    resources :recipes, only: :show
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
