@@ -21,6 +21,8 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem 'launchy', '~> 2.4.3'
+
 gem 'haml'
 
 # Use ActiveModel has_secure_password
@@ -36,6 +38,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'pry-byebug'
   gem 'rspec-rails', '~> 3.0'
+  gem 'capybara'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
@@ -45,6 +48,8 @@ group :development, :test do
 
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
+
+
 end
 
 
