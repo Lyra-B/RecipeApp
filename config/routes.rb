@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   resources :categories, :only => [:show]
+  resources :cuisines, :only => [:show]
   resources :welcome, :only => [:index]
   resources :users, :only => [:create]
   resources :recipes, :only => [:show] do
