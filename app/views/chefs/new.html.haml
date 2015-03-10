@@ -3,4 +3,8 @@
     = f.label :name
     = f.text_field :name
   %fieldset
+    = f.fields_for :recipes do |r|
+      = r.label :title
+      = r.text_field :title
+  %fieldset
     = f.submit

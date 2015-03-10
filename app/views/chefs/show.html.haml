@@ -1,3 +1,5 @@
+= @chef.name
+
 %h4
-  = @chef.recipes.each do |r|
-    = r
+  - @chef.recipes.each do |r|
+    = link_to r.title, chef_recipe_path(@chef,r)

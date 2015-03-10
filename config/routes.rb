@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     end
   end
   resources :chefs, :only => [:new, :create, :show] do
-    resources :recipes, only: :show
+    resources :recipes, :only => [:show]
   end
 
   # Example of regular route:
