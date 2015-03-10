@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
 
   before_filter do
     @categories = Category.all
+    @cuisines = Cuisine.all
     # @user = User.new
   end
 end
