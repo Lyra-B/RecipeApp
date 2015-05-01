@@ -7,5 +7,7 @@ class ApplicationController < ActionController::Base
     @categories = Category.all
     @cuisines = Cuisine.all
     # @user = User.new
+    @ingredients = Ingredient.all
+    # @recipes = Recipe.all
   end
 end
