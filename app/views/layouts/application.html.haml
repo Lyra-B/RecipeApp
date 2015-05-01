@@ -6,13 +6,17 @@
     = javascript_include_tag 'application'
     = csrf_meta_tags
   %body
+    %header
+      #flash= flash[:notice]
     %nav#sidebar
       %h3 Categories
       %ul#categories
         = render @categories
       %ul#categories
         = render @cuisines
-    / %h3= My Amazing Recipe App
+      %h3 Ingredients
+      = render @ingredients
+      = link_to 'Add Recipe', new_recipe_path
     %main
       = yield
 

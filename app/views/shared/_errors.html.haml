@@ -1,0 +1,4 @@
+- unless @recipe.errors.full_messages.blank?
+  %ul
+    - model.errors.full_messages.each do |error|
+      %li= error
