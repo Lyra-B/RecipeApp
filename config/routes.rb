@@ -9,13 +9,18 @@ Rails.application.routes.draw do
   resources :cuisines, :only => [:show]
   resources :welcome, :only => [:index]
   resources :users, :only => [:create]
-  resources :recipes, :only => [:show] do
+  # resources :recipes, :only => [:show] do
+
+  # end
+  resources :chefs, :only => [:new, :create, :show] do
+    resources :recipes, :only => [:show]
+  end
+  resources :recipes, :only => [:new, :create, :show]
+  resources :ingredients, :only => :show do
+    resources :recipes, :only => :index
     member do
       post :recommend
     end
-  end
-  resources :chefs, :only => [:new, :create, :show] do
-    resources :recipes, :only => [:show]
   end
 
   # Example of regular route:
